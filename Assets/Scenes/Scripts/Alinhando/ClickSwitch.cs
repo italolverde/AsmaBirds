@@ -11,17 +11,10 @@ public class ClickSwitch : MonoBehaviour
     {
         if (GetComponent<MoverObj>().enabled)
         {
-            buttonactivate = GetComponent<GameObject>();
-            buttondisable = GetComponent<GameObject>();
-
             GetComponent<MoverObj>().enabled = false;
             GetComponent<SpinObject>().enabled = true;
             buttonactivate.SetActive(true);
             buttondisable.SetActive(false);
-            
-
-
-            
         }
     }
 }

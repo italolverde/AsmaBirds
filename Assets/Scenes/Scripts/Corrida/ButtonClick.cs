@@ -7,6 +7,7 @@ public class ButtonClick : MonoBehaviour
 {
     [SerializeField] private Button buttonclick;
     [SerializeField] private GameObject quadrado;
+    [SerializeField] private GameObject cenario;
     private float speed = 16.25f;
     private int clicado = 0;
 
@@ -17,7 +18,7 @@ public class ButtonClick : MonoBehaviour
 
     private void Cliked()
     {
-        quadrado.transform.position = new Vector2(quadrado.transform.position.x + speed, quadrado.transform.position.y);
+        quadrado.transform.position = new Vector2(quadrado.transform.position.x + speed * Time.deltaTime, quadrado.transform.position.y);
         clicado++;
         if (clicado == 8)
         {

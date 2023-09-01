@@ -663,7 +663,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &795403768
 RectTransform:
   m_ObjectHideFlags: 0
@@ -680,9 +680,9 @@ RectTransform:
   m_Father: {fileID: 712776506}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 720, y: -2360.8499}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 368.66, y: 158.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &795403769
@@ -729,9 +729,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 931405836}
-        m_TargetAssemblyTypeName: ClickSwitch, Assembly-CSharp
-        m_MethodName: OnButtonClick
+      - m_Target: {fileID: 931405839}
+        m_TargetAssemblyTypeName: PositionCalc, Assembly-CSharp
+        m_MethodName: OnButtonEndConfirm
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -741,9 +741,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 931405839}
-        m_TargetAssemblyTypeName: PositionCalc, Assembly-CSharp
-        m_MethodName: OnButtonEndConfirm
+      - m_Target: {fileID: 931405836}
+        m_TargetAssemblyTypeName: ClickSwitch, Assembly-CSharp
+        m_MethodName: OnButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -833,9 +833,9 @@ GameObject:
   - component: {fileID: 931405833}
   - component: {fileID: 931405832}
   - component: {fileID: 931405835}
+  - component: {fileID: 931405839}
   - component: {fileID: 931405837}
   - component: {fileID: 931405836}
-  - component: {fileID: 931405839}
   - component: {fileID: 931405838}
   m_Layer: 7
   m_Name: nebulimetro
@@ -1015,7 +1015,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1161635570
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1032,9 +1032,9 @@ RectTransform:
   m_Father: {fileID: 712776506}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 720, y: -2360.8499}
   m_SizeDelta: {x: 368.66, y: 158.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1161635571
