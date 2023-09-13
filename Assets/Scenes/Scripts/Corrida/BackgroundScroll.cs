@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BackgroundScroll : ButtonClick
+public class BackgroundScroll : MonoBehaviour
 {
     MeshRenderer mesh;
     private float speedbg = 0.1f;

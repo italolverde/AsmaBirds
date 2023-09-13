@@ -26,15 +26,15 @@ public class PositionCalc : MonoBehaviour
         ymaxh = max_height.transform.position.y;
     }
 
-    private void calc_taxa_acerto(float alturaref, float alturaobj, float alturamax)
+    private void calc_taxa_acerto(float h_alturaref, float h_alturaobj, float alturamax)
     {
-        float diferenca_altura = Mathf.Abs(alturaref - alturaobj);
-        float taxa_redução_por_unidade = taxa_maxima / (alturamax - alturaref);
+        float h_diferenca_altura = Mathf.Abs(h_alturaref - h_alturaobj);
+        float h_taxa_redução_por_unidade = taxa_maxima / (alturamax - h_alturaref);
 
-        float taxa_de_acerto = taxa_maxima - diferenca_altura * taxa_redução_por_unidade;
-        taxa_de_acerto = Mathf.Max(Mathf.Min(taxa_de_acerto, taxa_maxima), 0);
+        float h_taxa_de_acerto = taxa_maxima - h_diferenca_altura * h_taxa_redução_por_unidade;
+        h_taxa_de_acerto = Mathf.Max(Mathf.Min(h_taxa_de_acerto, taxa_maxima), 0);
 
-        Debug.Log($"Taxa de acerto: {taxa_de_acerto.ToString("F")}%");
+        Debug.Log($"Taxa de acerto de altura: {h_taxa_de_acerto.ToString("F")}%");
     }
 
     public void OnButtonEndConfirm()

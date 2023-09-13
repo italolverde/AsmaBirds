@@ -7,16 +7,22 @@ public class MoverObj : MonoBehaviour
     Vector2 getmousePos;
     bool _drag = false;
     [SerializeField] private Transform obj;
+    private float fixedxpos;
     RaycastHit2D hit;
     private Vector2 offset;
     [SerializeField] private LayerMask layer;
     [SerializeField] private GameObject limite_top;
     [SerializeField] private GameObject limite_bottom;
 
+    private void Start()
+    {
+        fixedxpos = obj.transform.position.x;
+    }
+
     private void Update()
     {
         getmousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        getmousePos.x = 2f;
+        getmousePos.x = fixedxpos;
         hit = Physics2D.Raycast(getmousePos, Vector2.zero, 0f, layer);
         follow();
     }
