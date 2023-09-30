@@ -203,8 +203,7 @@ Transform:
   m_LocalPosition: {x: 0.45, y: -2.8, z: -10}
   m_LocalScale: {x: 0.039245978, y: 0.08179757, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1790620747}
+  m_Children: []
   m_Father: {fileID: 577116107}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -219,7 +218,7 @@ GameObject:
   - component: {fileID: 577116107}
   - component: {fileID: 577116106}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Vermelho
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -285,13 +284,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 577116105}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3545297, y: 0.25551915, z: 0}
-  m_LocalScale: {x: 0.11063586, y: 0.093049675, z: 1}
+  m_LocalPosition: {x: -0.35452968, y: 0.25551915, z: 0}
+  m_LocalScale: {x: 0.110635854, y: 0.09304967, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 33654115}
   m_Father: {fileID: 1393862509}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1393862504
 GameObject:
@@ -399,12 +398,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393862504}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.125, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 252.04904, y: 131.38467, z: 12.318208}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 577116107}
   - {fileID: 1941943887}
+  - {fileID: 577116107}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -663,7 +662,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -38, y: -691.32825}
-  m_SizeDelta: {x: 352.4843, y: 227.2525}
+  m_SizeDelta: {x: 352, y: 227}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1790620742
 GameObject:
@@ -748,8 +747,8 @@ Canvas:
   m_GameObject: {fileID: 1790620742}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 33654114}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -773,8 +772,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1738525279}
-  m_Father: {fileID: 33654115}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -792,7 +791,7 @@ GameObject:
   - component: {fileID: 1941943887}
   - component: {fileID: 1941943886}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: Azul
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -863,7 +862,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1393862509}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2080477826
 GameObject:
