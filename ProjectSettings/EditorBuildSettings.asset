@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Scenes/Encaixe pe\xE7as inalador.unity"
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Menu/Menu_principal.unity
+    guid: 949c3110c247ced428c2d4837fb6e300
+  - enabled: 1
+    path: "Assets/Scenes/Minigames/Encaixe pe\xE7as inalador.unity"
+    guid: b23c35d9e49f61349a15f5cd5d468b78
   m_configObjects: {}

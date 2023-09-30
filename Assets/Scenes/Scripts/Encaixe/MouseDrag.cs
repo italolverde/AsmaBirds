@@ -1,30 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
 public class MouseDrag : MonoBehaviour
 {
     Vector3 posInicial;
     Vector3 posDestino;
     Vector3 vetorDirecao;
-    Rigidbody2D _rigidbody;
-    FixedJoint2D _fixedjoint;
-    bool arrastando;
-    float distancia;
-    Vector2 zerado; 
-    [HideInInspector]
-    public bool conectado;
-    [Range(1, 15)]
-    public float movespeed = 15;
-    public Rigidbody2D peca;
-    public Transform conector;
-    [Range(0.1f, 2.0f)]
-    public float distanciaMinimaConector;
-    void Start()
+    [SerializeField] Rigidbody2D _rigidbody;
+    private bool arrastando;
+    static public bool conectado;
+    private float distancia;
+    private float movespeed;
+    [SerializeField] private GameObject azul;
+    [SerializeField] private GameObject vermelho;
+    [SerializeField] private GameObject vermelho_azul;
+    [SerializeField] private Transform conector;
+    private float distanciaMinimaConector = 1;
+    private bool connect_1 = false;
+    private void Start()
     {
         _rigidbody = transform.root.GetComponent<Rigidbody2D>();
-        //_rigidbody.gravityScale = 1;
     }
     void OnMouseDown()
     {
@@ -39,7 +36,7 @@ public class MouseDrag : MonoBehaviour
         vetorDirecao = posDestino - transform.root.position;
         _rigidbody.velocity = vetorDirecao * movespeed;
     }
-    private void OnMouseUp()
+    void OnMouseUp()
     {
         arrastando = false;
         while (vetorDirecao.x > 0 && vetorDirecao.y > 0)
@@ -50,7 +47,7 @@ public class MouseDrag : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if(!arrastando && !conectado)
+        if (!arrastando && !conectado)
         {
             distancia = Vector2.Distance(transform.root.position, conector.position);
             if (distancia < distanciaMinimaConector)
@@ -59,18 +56,18 @@ public class MouseDrag : MonoBehaviour
                 transform.root.position = Vector2.MoveTowards(transform.root.position, conector.position, 0.02f);
 
             }
-            if(distancia < 0.01f ) //Chegou
+            if (distancia < 0.01f) //Chegou
             {
-                GetComponent<FixedJoint2D>().enabled = true;
-                
                 conectado = true;
                 transform.root.position = conector.position;
             }
         }
-    }
-    void Update()
-    {
-       
-        
+        if (!arrastando && conectado && !connect_1)
+        {
+            vermelho_azul.transform.position = vermelho.transform.position;
+            connect_1 = true;
+            vermelho.SetActive(false);
+            azul.SetActive(false);
+        }
     }
 }
