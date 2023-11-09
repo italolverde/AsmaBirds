@@ -11,85 +11,108 @@ public class BlueController : MonoBehaviour
     [SerializeField] GameObject linhamid;
     [SerializeField] GameObject linhadown;
     private int pos = 0;
-    private float t = 0.1f;
-    private float speed = 1.0f;
-    public RaycastHit hit;
+    private float speed = 0.5f;
+    private int chance = 0;
+    private bool moving = false;
 
-
-    //exibir raycast e detectar contato
+    public void OnTriggerEnter2D(Collider2D coll)
+    {
+        if (coll.gameObject.tag == "Doença")
+        {
+            chance = Desvia();
+        }
+    }
     void FixedUpdate()
     {
-
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector2.right), out hit, Mathf.Infinity))
+        //nada ocorre
+        if (chance < 10)
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right) * hit.distance, Color.red);
-            if (hit.distance < 10)
+            return;
+        }
+        //subindo
+        else if (chance > 10 && chance < 55)
+        {
+            moving = true;
+
+            if (pos == 0)
             {
-                int chance = Desvia();
+                while (pos == 0 && moving)
+                {
+                    Vector2 a = azul.transform.position;
+                    Vector2 b = linhaup.transform.position;
 
-                if (chance < 26)
-                {
-                    return;
-                }
-                else if (chance > 26 && chance < 63)
-                {
-                    if (pos == 0)
+                    azul.transform.position = Vector2.MoveTowards(a, b, speed);
+                    if (a == b)
                     {
-                        Vector2 a = azul.transform.position;
-                        Vector2 b = linhaup.transform.position;
-
-                        azul.transform.position = Vector2.MoveTowards(a, Vector2.Lerp(a, b, t), speed);
                         pos = 1;
-                    }
-                    else if (pos == -1)
-                    {
-                        Vector2 a = azul.transform.position;
-                        Vector2 b = linhamid.transform.position;
-
-                        azul.transform.position = Vector2.MoveTowards(a, Vector2.Lerp(a, b, t), speed);
-                        pos = 0;
-                    }
-                    else
-                    {
-                        return;
+                        moving = false;
                     }
 
                 }
-                else
+            }
+           
+            else if (pos == -1)
+            {
+                while (pos == -1 && moving)
                 {
-                    if (pos == 1)
-                    {
-                        Vector2 a = azul.transform.position;
-                        Vector2 b = linhamid.transform.position;
+                    Vector2 a = azul.transform.position;
+                    Vector2 b = linhamid.transform.position;
 
-                        azul.transform.position = Vector2.MoveTowards(a, Vector2.Lerp(a, b, t), speed);
+                    azul.transform.position = Vector2.MoveTowards(a, b, speed);
+                    if (a == b)
+                    {
                         pos = 0;
+                        moving = false;
                     }
-                    else if (pos == 0)
-                    {
-                        Vector2 a = azul.transform.position;
-                        Vector2 b = linhadown.transform.position;
 
-                        azul.transform.position = Vector2.MoveTowards(a, Vector2.Lerp(a, b, t), speed);
-                        pos = -1;
-                    }
-                    else
-                    {
-                        return;
-                    }
                 }
             }
         }
+        //desce
         else
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right) * 6, Color.green);
+            if (pos == 1)
+            {
+                while (pos == 1 && moving)
+                {
+                    Vector2 a = azul.transform.position;
+                    Vector2 b = linhamid.transform.position;
+
+                    azul.transform.position = Vector2.MoveTowards(a, b, speed);
+                    if (a == b)
+                    {
+                        pos = 0;
+                        moving = false;
+                    }
+
+                }
+
+
+            }
+            else if (pos == 0)
+            {
+                while (pos == 0 && moving)
+                {
+                    Vector2 a = azul.transform.position;
+                    Vector2 b = linhadown.transform.position;
+
+                    azul.transform.position = Vector2.MoveTowards(a, b, speed);
+                    if (a == b)
+                    {
+                        pos = -1;
+                        moving = false;
+                    }
+
+                }
+            }
         }
+        
     }
 
     //Chance de desviar
     int Desvia()
     {
-        int chance = Random.Range(0, 101);
-        return chance;
+        int rng = Random.Range(0, 101);
+        return rng;
     }
 }
