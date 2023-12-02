@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class SceneChanger : MonoBehaviour 
 {    
     public LevelLoader levelLoader;
-    public string cena
+    public string cena;
     public string sceneName;
 
     public void LoadScene() 
@@ -17,6 +17,6 @@ public class SceneChanger : MonoBehaviour
         levelLoader.Transition(sceneName);
     }
     public void SceneChange(){
-        SceneManagement.LoadScene(cena)
+        SceneManager.LoadScene(cena);
     }
 }
