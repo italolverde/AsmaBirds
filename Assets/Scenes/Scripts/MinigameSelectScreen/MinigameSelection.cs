@@ -27,5 +27,9 @@ public class MinigameSelection : MonoBehaviour
     {
         mgPanel.updateMGpanel(MinigameList.instance.GetCurrent());
     }
+    public void MinigameLoad()
+    {
+        mgPanel.MinigameLoader(MinigameList.instance.GetCurrent());
+    }
     
 }

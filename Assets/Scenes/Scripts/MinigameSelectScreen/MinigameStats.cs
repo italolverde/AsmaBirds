@@ -9,5 +9,6 @@ public class MinigameStats : ScriptableObject
     public string gameName;
     public Sprite cover;
     public string score;
+    public string link;
 
 }
