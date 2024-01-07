@@ -6,23 +6,31 @@ public class Complete : MonoBehaviour
 {
     [SerializeField] private GameObject blue;
     [SerializeField] private GameObject red;
+    [SerializeField] private GameObject rdgrid;
     [SerializeField] private GameObject BeB;
     [SerializeField] private GameObject BeR;
-    private bool end = false;
+    [SerializeField] private GameObject gamelost;
+    [SerializeField] private GameObject gamewin;
     private float t = 0.3f;
     private bool bluewin;
     private bool redwin;
+
+    private void Start()
+    {
+        gamelost.SetActive(false);
+        gamewin.SetActive(false);
+    }
     private void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.gameObject.tag == "finish")
         {
-            float bluePos = blue.transform.position.x;
-            float redPos = red.transform.position.x;
-            if(bluePos > redPos)
+            float bluePosX = blue.transform.position.x;
+            float redPosX = red.transform.position.x;
+            if(bluePosX > redPosX)
             {
                 bluewin = true;
             }
-            else if(redPos > bluePos)
+            else if(redPosX > bluePosX)
             {
                 redwin = true;
             }
@@ -33,28 +41,35 @@ public class Complete : MonoBehaviour
     {
         if (bluewin)
         {
-            Debug.Log("Você perdeu!");
+            gamelost.SetActive(true);
             red.GetComponent<BoxCollider2D>().enabled = false;
         }
         else if (redwin)
         {
-            Debug.Log("Você venceu! Parabéns!");
+            gamewin.SetActive(true);
             blue.GetComponent<BoxCollider2D>().enabled = false;
+            
         }
         else
         {
             Debug.Log("Empate!!!");
         }
-        end = true;
     }
     private void FixedUpdate()
     {
-        if (end)
+        if(redwin)
         {
             Vector2 a = blue.transform.position;
             Vector2 b = BeB.transform.position;
 
             blue.transform.position = Vector2.MoveTowards(a, Vector2.Lerp(a,b,t), t);
+        }
+        else if (bluewin)
+        {
+            Vector2 a = rdgrid.transform.position;
+            Vector2 b = BeR.transform.position;
+
+            rdgrid.transform.position = Vector2.MoveTowards(a, Vector2.Lerp(a, b, t), t);
         }
     }
 }

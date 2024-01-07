@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using GG.Infrastructure.Utils.Swipe;
 public class Controler_red : MonoBehaviour
 {
+    [SerializeField] private SwipeListener _swipeListener;
+    private string swipeInput;
     private int pos = 0;
     private bool moving = false;
     private float speed = 0.8f;
@@ -11,23 +14,40 @@ public class Controler_red : MonoBehaviour
     [SerializeField] private GameObject linha_up;
     [SerializeField] private GameObject linha_mid;
     [SerializeField] private GameObject linha_down;
-    
+
+
+    private void OnEnable()
+    {
+        _swipeListener.OnSwipe.AddListener(OnSwipe);
+    }
+
+    private void OnSwipe(string swipe)
+    {
+        swipeInput = swipe;
+        Debug.Log(swipe);
+    }
+    private void OnDisable()
+    {
+        _swipeListener.OnSwipe.RemoveListener(OnSwipe);
+    }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (swipeInput == "Up")
         {
             if (pos < 1)
             {
                 moving = true;
                 pos++;
+                swipeInput = " ";
             }
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (swipeInput == "Down")
         {
             if (pos > -1)
             {
                 moving = true;
                 pos--;
+                swipeInput = " ";
             }
         }
     }
