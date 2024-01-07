@@ -32,7 +32,7 @@ public class InsertDB : MonoBehaviour
 
         if (_EmailInput.Length < 7)
         {
-            CadastroStatus.text = "E-mail inválido. O email deve ter pelo menos 7 caracteres.";
+            CadastroStatus.text = "E-mail invÃ¡lido. O email deve ter pelo menos 7 caracteres.";
             return;
         }
 
@@ -49,19 +49,19 @@ public class InsertDB : MonoBehaviour
         dbcon = new SqliteConnection(conn);
         dbcon.Open();
         dbcmd = dbcon.CreateCommand();
-        string SQlQuery = "Insert Into Usuarios(nome, sobrenome, email, senha)" +
+        string SQlQuery = "Insert Into Users(nome, sobrenome, email, senha)" +
                           "Values('" + _NameInput + "', '" + _SobrenomeInput + "', '" + _EmailInput + "', '" + _PasswordInput + "')";
         dbcmd.CommandText = SQlQuery;
 
         try
         {
             dbcmd.ExecuteNonQuery();
-            Debug.Log("Inserção bem-sucedida.");
-            LoadScenes("Login");
+            Debug.Log("InserÃ§Ã£o bem-sucedida.");
+            LoadScenes("Loginteste");
         }
         catch (System.Exception)
         {
-            CadastroStatus.text = "E-mail já cadastrado";
+            CadastroStatus.text = "E-mail jÃ¡ cadastrado";
         }
 
         dbcmd.Dispose();
@@ -74,6 +74,5 @@ public class InsertDB : MonoBehaviour
     {
         SceneManager.LoadScene(cena);
     }
-
 
 }
