@@ -148,8 +148,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 198981244}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.59444153, y: 7.785324, z: -18432}
-  m_LocalScale: {x: 17.5104, y: 17.5104, z: 17.5104}
+  m_LocalPosition: {x: -0.59444153, y: 6.6, z: -1}
+  m_LocalScale: {x: 17.5104, y: 17.5104, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 990061337}
@@ -502,7 +502,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359986369}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.59444153, y: 5.750122, z: -18432}
+  m_LocalPosition: {x: -0.59444153, y: 5.750122, z: -1}
   m_LocalScale: {x: 17.5104, y: 17.5104, z: 17.5104}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -872,8 +872,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 573036984}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5303054, y: -4.477892, z: 83.80168}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1.0481, y: -4.6139, z: 83.80168}
+  m_LocalScale: {x: 0.8282, y: 0.9253, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -906,16 +906,16 @@ RectTransform:
   m_GameObject: {fileID: 619272894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4, y: 1.18, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1539908527}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.02002, y: 521}
-  m_SizeDelta: {x: 1609.2, y: 1609.2}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 516}
+  m_SizeDelta: {x: 221.95996, y: -760}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &619272896
 MonoBehaviour:
@@ -1148,8 +1148,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853071235}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.6089, y: -0.4705, z: 0}
+  m_LocalScale: {x: 0.8282, y: 0.9253, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1396,14 +1396,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 573036985}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: Loader
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: "Encaixe pe\xE7as inalador"
+          m_StringArgument: Minigame_select
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1048145017
@@ -1481,10 +1481,10 @@ RectTransform:
   m_Father: {fileID: 1539908527}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 767.98, y: -1024}
-  m_SizeDelta: {x: 1536, y: 2048}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -0.099975586, y: -85}
+  m_SizeDelta: {x: 793.42004, y: 2093.8}
   m_Pivot: {x: 0.5, y: 0.50000006}
 --- !u!114 &1324153547
 MonoBehaviour:
@@ -1503,7 +1503,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 950
     m_Bottom: 320
-  m_ChildAlignment: 7
+  m_ChildAlignment: 4
   m_Spacing: 60
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
@@ -1682,10 +1682,10 @@ RectTransform:
   m_Father: {fileID: 1947043304}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000061035, y: 0}
-  m_SizeDelta: {x: 1536, y: 2048}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.0072021484, y: 0}
+  m_SizeDelta: {x: -0.19995117, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1539908528
 MonoBehaviour:
@@ -1707,7 +1707,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 262fa8e123e07854ea987a5ba9137ea2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 648e43bfa7b061640a0d6e9c5b136cf1, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2054,7 +2054,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.2975483
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2133,12 +2133,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 720, y: 2150.1}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96

@@ -16,6 +16,7 @@ public class GameEnd : MonoBehaviour
             game_ended = true;
             ui_endgame.SetActive(true);
             roxo.SetActive(false);
+            verde.SetActive(false);
         }
     }
 }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BackgroundScroll : MonoBehaviour
 {
-    MeshRenderer mesh;
-    private float speedbg = 0.1f;
+    public MeshRenderer mesh;
+    public static float speedbg = 0.2f;
     
     void Update()
     {

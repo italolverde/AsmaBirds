@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - "Doen\xE7a"
+  - Gameover
+  - Moeda
+  - Powerup
+  - finish
   layers:
   - Default
   - TransparentFX
