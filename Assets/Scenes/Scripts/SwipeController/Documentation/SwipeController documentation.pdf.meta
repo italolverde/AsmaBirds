@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/Scripts/SwipeController/Documentation/SwipeController documentation.pdf.meta
 guid: 39278964bacdc8647a3fcf1f5d55f607
+========
+guid: 1277aac55ae28e04aaea2f469c4c946d
+folderAsset: yes
+>>>>>>>> branch-italo:Assets/Scenes/Menu.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
