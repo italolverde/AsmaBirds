@@ -35,18 +35,18 @@ public class login : MonoBehaviour
         if (result > 0)
         {
             // se existir, pega o id do usuario
-            SQlQuery = "Select id_usuario from Users where email='" + _EmailInput + "' and senha='" + _PasswordInput + "'";
+            SQlQuery = "Select ID from Users where email='" + _EmailInput + "' and senha='" + _PasswordInput + "'";
             dbcmd.CommandText = SQlQuery;
             reader = dbcmd.ExecuteReader();
             if (reader.Read())
             {
-                int id_usuario = reader.GetInt32(0);
-                PlayerPrefs.SetInt("id_usuario", id_usuario);
+                int ID = reader.GetInt32(0);
+                PlayerPrefs.SetInt("ID", ID);
             }
             reader.Close();
 
             LoginStatus.text = "Login realizado com sucesso";
-            SceneManager.LoadScene("Select Mode");
+            SceneManager.LoadScene("Menu_principal");
         }
         else
         {
