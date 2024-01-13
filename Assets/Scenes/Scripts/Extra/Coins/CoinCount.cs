@@ -9,7 +9,7 @@ public class CoinCount : MonoBehaviour
 {
     private int score;
     private int score_ui;
-    [SerializeField] int score_total;
+    [SerializeField] private int score_total;
     public Text score_txt;
     public Text Ui_end_score;
     public string DataBaseName;
@@ -43,7 +43,7 @@ public class CoinCount : MonoBehaviour
                     using (IDbCommand dbcmd = dbcon.CreateCommand())
                     {
                         int ID = PlayerPrefs.GetInt("ID", -1);
-                        int moedasParaAdicionar = 15; // Valor fixo para adicionar
+                        int moedasParaAdicionar = score_total; // Valor fixo para adicionar
 
                         // Preparar o comando SQL para incrementar a coluna moedas
                         string sqlQuery = "UPDATE Users SET moedas = moedas + @moedasParaAdicionar WHERE ID = @ID";

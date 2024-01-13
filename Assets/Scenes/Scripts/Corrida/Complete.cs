@@ -11,6 +11,7 @@ public class Complete : MonoBehaviour
     [SerializeField] private GameObject BeR;
     [SerializeField] private GameObject gamelost;
     [SerializeField] private GameObject gamewin;
+    private coin_increment increment;
     private float t = 0.3f;
     private bool bluewin;
     private bool redwin;
@@ -48,6 +49,7 @@ public class Complete : MonoBehaviour
         {
             gamewin.SetActive(true);
             blue.GetComponent<BoxCollider2D>().enabled = false;
+            increment.adicionaMoedas(redwin);
             
         }
         else

@@ -5,6 +5,10 @@ using UnityEngine;
 public class PauseSystem : MonoBehaviour
 {
     [SerializeField] GameObject PauseMenuUi;
+
+    private void Awake(){
+        Time.timeScale = 1f;
+    }
     private void Start()
     {
         PauseMenuUi.SetActive(false);

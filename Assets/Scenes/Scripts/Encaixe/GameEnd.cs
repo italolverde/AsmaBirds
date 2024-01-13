@@ -9,7 +9,12 @@ public class GameEnd : MonoBehaviour
     [SerializeField] GameObject conector;
     [SerializeField] GameObject ui_endgame;
     static public bool game_ended = false;
-   void Update()
+
+    void Awake(){
+        game_ended = false;
+    }
+    
+    void Update()
     {
         if(verde.transform.position == conector.transform.position && game_ended == false)
         {
