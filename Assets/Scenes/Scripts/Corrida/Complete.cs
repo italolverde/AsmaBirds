@@ -20,6 +20,7 @@ public class Complete : MonoBehaviour
     {
         gamelost.SetActive(false);
         gamewin.SetActive(false);
+        increment = FindObjectOfType<coin_increment>();
     }
     private void OnTriggerEnter2D(Collider2D coll)
     {

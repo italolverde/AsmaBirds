@@ -7,6 +7,10 @@ public class BackgroundScroll : MonoBehaviour
     public MeshRenderer mesh;
     public static float speedbg = 0.2f;
     
+    void Awake(){
+        speedbg = 0.2f;
+    }
+    
     void Update()
     {
         mesh.material.mainTextureOffset += new Vector2(speedbg * Time.deltaTime, 0);

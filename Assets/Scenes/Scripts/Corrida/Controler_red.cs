@@ -32,7 +32,7 @@ public class Controler_red : MonoBehaviour
     }
     private void Update()
     {
-        if (swipeInput == "Up")
+        if (swipeInput == "Right")
         {
             if (pos < 1)
             {
@@ -41,7 +41,7 @@ public class Controler_red : MonoBehaviour
                 swipeInput = " ";
             }
         }
-        if (swipeInput == "Down")
+        if (swipeInput == "Left")
         {
             if (pos > -1)
             {

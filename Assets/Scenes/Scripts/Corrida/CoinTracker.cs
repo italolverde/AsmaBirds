@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CoinTracker : MonoBehaviour
 {
-    public static int score;
+    public int score;
     public Text score_txt;
     void Start()
     {
