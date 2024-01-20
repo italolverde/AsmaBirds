@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class RotationCalc : MonoBehaviour
@@ -7,6 +8,10 @@ public class RotationCalc : MonoBehaviour
     public RaycastHit hit;
     [SerializeField] private GameObject maxheight;
     [SerializeField] private GameObject pointref;
+    [SerializeField] private Text result_txt;
+    [SerializeField] private Text media_txt;
+
+    private float r_taxa_de_acerto;
     private float taxa_maxima = 100f;
 
     private void Start()
@@ -40,10 +45,10 @@ public class RotationCalc : MonoBehaviour
         float r_diferenca_altura = Mathf.Abs(r_point - r_hitimpact);
         float r_taxa_reducao_por_unidade = taxa_maxima / (r_alturamax - r_point);
 
-        float r_taxa_de_acerto = taxa_maxima - r_diferenca_altura * r_taxa_reducao_por_unidade;
+        r_taxa_de_acerto = taxa_maxima - r_diferenca_altura * r_taxa_reducao_por_unidade;
         r_taxa_de_acerto = Mathf.Max(Mathf.Min(r_taxa_de_acerto, taxa_maxima), 0);
 
-        Debug.Log($"Taxa de acerto de ângulo: {r_taxa_de_acerto.ToString("F")}%");
+        result_txt.text = $"Taxa de acerto de Ã¢ngulo: {r_taxa_de_acerto.ToString("F")}%";
 
     }
 
@@ -57,14 +62,15 @@ public class RotationCalc : MonoBehaviour
         }
         else
         {
-            Debug.Log($"Taxa de acerto: 0.00%");
+            result_txt.text = "Taxa de acerto de Ã¢ngulo: 0.00%";
         }
+        MediaCalc(PositionCalc.h_taxa_de_acerto, r_taxa_de_acerto);
         
     }
 
     public void MediaCalc(float taxa_h, float taxa_r)
     {
-        float media = (taxa_h + taxa_r) / 200;
-        Debug.Log($"Taxa média de acerto: {media.ToString("F")}");
+        float media = (taxa_h + taxa_r) / 2;
+        media_txt.text = $"Taxa mÃ©dia de acerto: {media.ToString("F")}%";
     }
 }

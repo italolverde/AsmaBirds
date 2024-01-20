@@ -8,7 +8,7 @@ public class ligarverde : MonoBehaviour
     public GameObject roxo;
     void Update()
     {
-        if(MouseDrag.conectado)
+        if(Connected.conectado)
         {
             verde.SetActive(true);
         }

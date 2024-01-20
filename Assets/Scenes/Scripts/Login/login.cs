@@ -5,6 +5,7 @@ using Mono.Data.Sqlite;
 using System.Data;
 using UnityEngine.UI;
 using System;
+using System.IO;
 using UnityEngine.SceneManagement;
 
 public class login : MonoBehaviour
@@ -13,6 +14,32 @@ public class login : MonoBehaviour
     public InputField PasswordInput;
     public string DataBaseName;
     public Text LoginStatus;
+    private string pathToDB;
+
+    private void Start()
+    {
+        ConnectionDB ();
+    }
+
+    void ConnectionDB()
+    {
+        if (Application.platform != RuntimePlatform.Android)
+        {
+            pathToDB = Application.dataPath + "/StreamingAssets/" + DataBaseName;
+        }
+        else
+        {
+            pathToDB = Application.persistentDataPath + "/" + DataBaseName;
+
+            if (!File.Exists(pathToDB))
+            {
+                WWW load = new WWW("jar:file://" + Application.dataPath + "!/assets/" + DataBaseName);
+                while (!load.isDone) { }
+
+                File.WriteAllBytes(pathToDB, load.bytes);
+            }
+        }
+    }
 
     public void InsertLogin()
     {

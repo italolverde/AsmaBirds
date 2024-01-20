@@ -17,7 +17,7 @@ public class BlueController : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.gameObject.tag == "Doença")
+        if (coll.gameObject.tag == "DoenÃ§a")
         {
             chance = Desvia();
         }

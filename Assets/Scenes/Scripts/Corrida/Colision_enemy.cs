@@ -10,7 +10,7 @@ public class Colision_enemy : MonoBehaviour
     private float lastHit;
     private void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.gameObject.tag == "Doença")
+        if (coll.gameObject.tag == "DoenÃ§a")
         {
             if(Time.time - lastHit < cooldown)
             {

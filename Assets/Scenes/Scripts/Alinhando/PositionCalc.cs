@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class PositionCalc : MonoBehaviour
@@ -8,10 +9,12 @@ public class PositionCalc : MonoBehaviour
     [SerializeField] private GameObject point_ref;
     [SerializeField] private GameObject nebulimetro;
     [SerializeField] private GameObject max_height;
+    [SerializeField] private Text result_txt;
 
     private float yrefpos;
     private float ynebpos;
     private float ymaxh;
+    public static float h_taxa_de_acerto;
 
     private float taxa_maxima = 100f; 
     
@@ -29,12 +32,12 @@ public class PositionCalc : MonoBehaviour
     private void calc_taxa_acerto(float h_alturaref, float h_alturaobj, float alturamax)
     {
         float h_diferenca_altura = Mathf.Abs(h_alturaref - h_alturaobj);
-        float h_taxa_redução_por_unidade = taxa_maxima / (alturamax - h_alturaref);
+        float h_taxa_reducao_por_unidade = taxa_maxima / (alturamax - h_alturaref);
 
-        float h_taxa_de_acerto = taxa_maxima - h_diferenca_altura * h_taxa_redução_por_unidade;
+        h_taxa_de_acerto = taxa_maxima - h_diferenca_altura * h_taxa_reducao_por_unidade;
         h_taxa_de_acerto = Mathf.Max(Mathf.Min(h_taxa_de_acerto, taxa_maxima), 0);
 
-        Debug.Log($"Taxa de acerto de altura: {h_taxa_de_acerto.ToString("F")}%");
+        result_txt.text = $"Taxa de acerto de altura: {h_taxa_de_acerto.ToString("F")}%";
     }
 
     public void OnButtonEndConfirm()
