@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Mono.Data.Sqlite;
 using System.Data;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 using System;
 using System.IO;
 using UnityEngine.SceneManagement;
@@ -18,27 +19,38 @@ public class InsertDB : MonoBehaviour
     public Text CadastroStatus;
     private string pathToDB;
 
-    private void Start()
+    void Start()
     {
-        ConnectionDB ();
+        StartCoroutine(LoadDatabase());
     }
 
-    void ConnectionDB()
+    IEnumerator LoadDatabase()
     {
         if (Application.platform != RuntimePlatform.Android)
         {
-            pathToDB = Application.dataPath + "/StreamingAssets/" + DataBaseName;
+            pathToDB = Path.Combine(Application.streamingAssetsPath, DataBaseName);
+            Debug.Log(pathToDB);
+            Debug.Log(Application.persistentDataPath);
         }
         else
         {
-            pathToDB = Application.persistentDataPath + "/" + DataBaseName;
+            pathToDB = Path.Combine(Application.persistentDataPath, DataBaseName);
 
             if (!File.Exists(pathToDB))
             {
-                WWW load = new WWW("jar:file://" + Application.dataPath + "!/assets/" + DataBaseName);
-                while (!load.isDone) { }
+                string url = Path.Combine(Application.streamingAssetsPath, DataBaseName);
+                UnityWebRequest www = UnityWebRequest.Get(url);
 
-                File.WriteAllBytes(pathToDB, load.bytes);
+                yield return www.SendWebRequest();
+
+                if (www.result == UnityWebRequest.Result.Success)
+                {
+                    File.WriteAllBytes(pathToDB, www.downloadHandler.data);
+                }
+                else
+                {
+                    Debug.LogError("Failed to load database: " + www.error);
+                }
             }
         }
     }
