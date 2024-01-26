@@ -17,41 +17,59 @@ public class InsertDB : MonoBehaviour
     public InputField PasswordInput;
     public string DataBaseName;
     public Text CadastroStatus;
+    private IDbConnection dbcon;
     private string pathToDB;
 
     void Start()
     {
-        StartCoroutine(LoadDatabase());
+        string databasePath = Path.Combine(Application.streamingAssetsPath, "Users.db");
+        StartCoroutine(LoadDatabase(databasePath));
     }
 
-    IEnumerator LoadDatabase()
+    IEnumerator LoadDatabase(string dbPath)
     {
-        if (Application.platform != RuntimePlatform.Android)
+        if (Application.platform == RuntimePlatform.Android)
         {
-            pathToDB = Path.Combine(Application.streamingAssetsPath, DataBaseName);
-            Debug.Log(pathToDB);
-            Debug.Log(Application.persistentDataPath);
-        }
-        else
-        {
-            pathToDB = Path.Combine(Application.persistentDataPath, DataBaseName);
-
-            if (!File.Exists(pathToDB))
+            // No Android, copie o banco de dados para Application.persistentDataPath onde ele pode ser acessado
+            string persistentPath = Path.Combine(Application.persistentDataPath, "Users.db");
+            if (!File.Exists(persistentPath))
             {
-                string url = Path.Combine(Application.streamingAssetsPath, DataBaseName);
-                UnityWebRequest www = UnityWebRequest.Get(url);
-
+                UnityWebRequest www = UnityWebRequest.Get(dbPath);
                 yield return www.SendWebRequest();
-
                 if (www.result == UnityWebRequest.Result.Success)
                 {
-                    File.WriteAllBytes(pathToDB, www.downloadHandler.data);
+                    File.WriteAllBytes(persistentPath, www.downloadHandler.data);
+                    dbPath = persistentPath;
                 }
                 else
                 {
                     Debug.LogError("Failed to load database: " + www.error);
+                    yield break;
                 }
             }
+            else
+            {
+                dbPath = persistentPath;
+            }
+        }
+
+        // Agora dbPath contém o caminho correto para o banco de dados em todas as plataformas
+        ConnectToDatabase(dbPath);
+    }
+
+    private void ConnectToDatabase(string dbPath)
+    {
+        string connectionString = "URI=file:" + dbPath;
+        dbcon = new SqliteConnection(connectionString);
+
+        try
+        {
+            dbcon.Open();
+            Debug.Log("Connected to database.");
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError("Error connecting to database: " + ex.Message);
         }
     }
 

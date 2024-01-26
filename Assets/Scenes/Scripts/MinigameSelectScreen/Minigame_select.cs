@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Mono.Data.Sqlite;
 using System.Data;
+using TMPro;
 
 public class Minigame_select : MonoBehaviour
 {
 
     public Text textName;
-    public Text IntMoedas; // Alterado de Integer para Text
+    public TextMeshProUGUI IntMoedas; // Alterado de Integer para Text
     public string DataBaseName;
 
     void Start()
