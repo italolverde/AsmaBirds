@@ -2,17 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DocStats : MonoBehaviour
+[CreateAssetMenu(fileName = "Docs_", menuName ="ScriptableObject/Documents")]
+public class DocStats : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string Doc_text;
 }

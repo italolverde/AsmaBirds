@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb31b213c1b83204c80d023454a0e667, type: 3}
+  m_Name: Docs_tela8
+  m_EditorClassIdentifier: 
+  Doc_text: "Como usar as \u201Cbombinhas\u201D? Passo a passo:\\n \\nBombinha \xE9
+    a maneira como as pessoas chamam todas as medica\xE7\xF5es que devem ser inaladas
+    (aspiradas) no tratamento da asma. Esse nome vem dos primeiros dispositivos que
+    surgiram e ainda existem. Na verdade, bombinha quer dizer o recipiente que \xE9
+    utilizado para armazenar os diferentes tipos de medicamento."

@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 3677038812962530251}
   - component: {fileID: 3677038812962530250}
   m_Layer: 5
-  m_Name: AsmaDoc
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -792,8 +792,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.2571, y: -14.390015}
-  m_SizeDelta: {x: 533.7638, y: 818.8}
+  m_AnchoredPosition: {x: -22.86, y: -14.390015}
+  m_SizeDelta: {x: 458.87, y: 818.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3677038814585409185
 CanvasRenderer:

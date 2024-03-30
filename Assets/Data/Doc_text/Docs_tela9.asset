@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb31b213c1b83204c80d023454a0e667, type: 3}
+  m_Name: Docs_tela9
+  m_EditorClassIdentifier: 
+  Doc_text: "Modo de uso:\\n \\n1\xBA passo - Preparo do dispositivo para uso:\\n
+    \\n- Agitar nebul\xEDmetro 8-10 vezes\\n \\n- Retirar tampa de prote\xE7\xE3o\\n
+    \\n2\xBA passo - Preparo dos pulm\xF5es para receber medicamento\\n \\n- Inspira\xE7\xE3o
+    profunda seguida de expira\xE7\xE3o total\\n"

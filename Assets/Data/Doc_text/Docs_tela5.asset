@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb31b213c1b83204c80d023454a0e667, type: 3}
+  m_Name: Docs_tela5
+  m_EditorClassIdentifier: 
+  Doc_text: "Tratamento:\\n \\nBaseia-se nas medidas de higiene do ambiente, uso
+    de medicamentos e vacinas para alergia. A maioria dos pacientes com asma \xE9
+    tratada com dois tipos de medica\xE7\xE3o: (1) medica\xE7\xE3o chamada controladora
+    ou de manuten\xE7\xE3o, que serve para prevenir o aparecimento dos sintomas e
+    evitar as crises de asma e, (2) medica\xE7\xE3o de al\xEDvio ou de resgate, que
+    serve para aliviar os sintomas quando houver piora da asma. As medica\xE7\xF5es
+    controladoras, que s\xE3o as \u201Cbombinhas\u201D usadas diariamente, reduzem
+    a inflama\xE7\xE3o dos br\xF4nquios, diminuem o risco de crises de asma e evitam
+    a perda futura da capacidade respirat\xF3ria. O uso correto da medica\xE7\xE3o
+    controladora diminui muito ou at\xE9 elimina a necessidade da medica\xE7\xE3o
+    de al\xEDvio. "

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb31b213c1b83204c80d023454a0e667, type: 3}
+  m_Name: Docs_tela11
+  m_EditorClassIdentifier: 
+  Doc_text: "4\xBA passo - Lavar bem a boca.\\n \\nAl\xE9m disso, \xE9 recomendado
+    que haja limpeza do bocal com um pano ou papel \xFAmido.\\n \\n\\nObserva\xE7\xE3o:
+    Caso sua medica\xE7\xE3o venha em c\xE1psulas, como a medica\xE7\xE3o \u201CAlenia\u201D,
+    deve-se:\\n \\n- Posicionar uma das c\xE1psulas no compartimento adequado;\\n
+    - Apertar o bot\xE3o azul algumas vezes, pois ele vai furar a c\xE1psula e liberar
+    a medica\xE7\xE3o;\\n - Logo ap\xF3s, seguir a 2\xAA, 3\xAA e 4\xAA etapas descritas
+    acima.\\n \\n\\nFontes:\\nAssocia\xE7\xE3o Brasileira de Alergia e Imunopatologia\\nSociedade
+    Brasileira de Pneumologia e Tisiologia"

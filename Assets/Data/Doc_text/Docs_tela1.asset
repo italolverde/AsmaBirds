@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb31b213c1b83204c80d023454a0e667, type: 3}
+  m_Name: Docs_tela1
+  m_EditorClassIdentifier: 
+  Doc_text: "SAIBA MAIS SOBRE A ASMA\\n\\nO que \xE9:\\n\\nA asma (tamb\xE9m conhecida
+    como \u201Cbronquite asm\xE1tica\u201D ou como \u201Cbronquite al\xE9rgica\u201D)
+    \xE9 uma doen\xE7a que acomete os pulm\xF5es, acompanhada de uma inflama\xE7\xE3o
+    cr\xF4nica dos br\xF4nquios (tubos que levam o ar para dentro dos pulm\xF5es).
+    Os conhecimentos iniciais sobre a doen\xE7a eram restritos, mas com os avan\xE7os
+    da medicina nas \xFAltimas d\xE9cadas, passou-se a conhecer melhor suas causas,
+    mecanismos envolvidos, surgindo novos medicamentos e tratamentos. No entanto,
+    apesar de todos os progressos, a asma ainda hoje \xE9 uma doen\xE7a problem\xE1tica
+    e que pode levar \xE0 morte."

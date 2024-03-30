@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb31b213c1b83204c80d023454a0e667, type: 3}
+  m_Name: Docs_tela10
+  m_EditorClassIdentifier: 
+  Doc_text: "3\xBA passo - Uso do nebul\xEDmetro\\n \\n- Posicione dedo indicador
+    e dedo m\xE9dio na parte de cima do dispositivo e coloque o dedo polegar na base\\n
+    \\n- \xC9 prefer\xEDvel que se tente manter uma dist\xE2ncia de 2 dedos do bocal
+    do nebul\xEDmetro, em rela\xE7\xE3o \xE0 boca. Se caso n\xE3o conseguir dessa
+    forma, pode colocar o bocal na boca.\\n \\n- \xC9 ideal inclinar levemente a
+    cabe\xE7a para baixo, como forma de auxiliar no processo de inala\xE7\xE3o e
+    direcionamento do medicamento\\n \\n- Para acionar a dose do medicamento, aperta-se
+    o canh\xE3o de alum\xEDnio e, ao mesmo tempo, o paciente deve inspirar de maneira
+    s\xEDncrona \xE0 sa\xEDda do medicamento.\\n \\n- Ap\xF3s inala\xE7\xE3o, fecha-se
+    a boca e se deve segurar a respira\xE7\xE3o por pelo menos 10 segundos\\n \\n-
+    Depois desse processo, respirar normalmente\\n"

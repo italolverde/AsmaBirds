@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb31b213c1b83204c80d023454a0e667, type: 3}
+  m_Name: Docs_tela7
+  m_EditorClassIdentifier: 
+  Doc_text: "\xC9 recomendado que n\xE3o haja fumantes no ambiente domiciliar; animais
+    devem ser mantidos fora de casa, ou no m\xEDnimo n\xE3o entrarem nos quartos
+    de dormir.\\n \\n\u2013 uso correto e di\xE1rio da medica\xE7\xE3o prescrita
+    pelo m\xE9dico; \u2013 deixar o ambiente de conv\xEDvio di\xE1rio, principalmente
+    o quarto, bem limpo e arejado;\\n \u2013 a limpeza deve ser di\xE1ria com aspirador
+    de p\xF3 (de prefer\xEAncia que tenha o Filtro HEPA) e pano \xFAmido, sem produtos
+    com cheiro forte;\\n \u2013 n\xE3o usar vassouras nem espanadores, pois espalham
+    a poeira fina, que ficar\xE1 em suspens\xE3o e voltar\xE1 a se depositar;\\n
+    \u2013 retirar tapetes, carpetes, cortinas, almofadas, estantes com livros, enfim,
+    tudo que facilite o ac\xFAmulo de p\xF3.\\n \\n\\nFontes:\\nAssocia\xE7\xE3o
+    Brasileira de Alergia e Imunopatologia Sociedade\\nBrasileira de Pneumologia
+    e Tisiologia"
